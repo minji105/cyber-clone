@@ -20,9 +20,7 @@ const SearchField = styled.div`
   align-items: center;
 
   img {
-    width: 16px;
-    height: 16px;
-    margin: 4px;
+    padding-right: 8px;
   }
 
   input {
@@ -65,8 +63,6 @@ const Icons = styled.div`
   gap: 24px;
 
   img {
-    height: 22px;
-    margin: 5px;
     cursor: pointer;
   }
 `
@@ -74,9 +70,9 @@ const Icons = styled.div`
 function Header() {
   return (
     <HeaderContainer>
-      <img src="./imgs/Logo.png" alt="logo" width={64} />
+      <img src="./imgs/logo-black.png" alt="logo" width={96} />
       <SearchField>
-        <img src="./imgs/search icon.png" alt="search icon" />
+        <img src="./imgs/search-icon.png" alt="search icon" />
         <input type="text" placeholder="Search" />
       </SearchField>
       <Nav>
@@ -88,9 +84,9 @@ function Header() {
         </ul>
       </Nav>
       <Icons>
-        <img src="/imgs/favorites icon.png" alt="favorites icon" />
-        <img src="/imgs/cart icon.png" alt="cart icon" />
-        <img src="/imgs/user icon.png" alt="user icon" />
+        <img src="/imgs/favorites-icon.png" alt="favorites icon" />
+        <img src="/imgs/cart-icon.png" alt="cart icon" />
+        <img src="/imgs/user-icon.png" alt="user icon" />
       </Icons>
     </HeaderContainer>
   );
