@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
@@ -70,7 +71,9 @@ const Icons = styled.div`
 function Header() {
   return (
     <HeaderContainer>
-      <img src="./imgs/logo-black.png" alt="logo" width={96} />
+      <Link to='/'>
+        <img src="./imgs/logo-black.png" alt="logo" width={96} />
+      </Link>
       <SearchField>
         <img src="./imgs/search-icon.png" alt="search icon" />
         <input type="text" placeholder="Search" />
