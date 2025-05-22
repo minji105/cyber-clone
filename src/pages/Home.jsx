@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import Category from "../components/Category";
 import Products from "../components/Products";
+import CategoryBanner from "../components/ItemBanner";
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
       <Banner />
       <Category />
       <Products />
+      <CategoryBanner />
     </div>
   );
 }
