@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductCard from "./ProductCard";
-import { useEffect, useState } from "react";
+import { categories } from "./data/categories";
 
 const ProductWrapper = styled.div`
   padding: 56px 160px;
@@ -39,15 +40,6 @@ const ProductTag = styled.ul`
     }
   }
 `
-const categories = [
-  { key: "all", label: "All" },
-  { key: "mens-shirts", label: "Clothes" },
-  { key: "laptops", label: "Electronics" },
-  { key: "furniture", label: "Furniture" },
-  { key: "mens-shoes", label: "Shoes" },
-  { key: "smartphones", label: "Smartphones" },
-  { key: "mobile-accessories", label: "Cameras" }
-];
 
 function Products() {
   const [allProducts, setAllProducts] = useState([]);
@@ -93,13 +85,13 @@ function Products() {
   return (
     <ProductWrapper>
       <ProductTag>
-        {categories.map(({ key, label }) => (
+        {categories.map(({ key, title }) => (
           <li
             key={key}
             onClick={() => key === 'all' ? handleAllTag() : handleFiltering(key)}
             className={selected === key ? 'active' : ''}
           >
-            {label}
+            {title}
           </li>
         ))}
       </ProductTag>

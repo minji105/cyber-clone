@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { categories } from "./data/categories";
 
 const CategoryContainer = styled.div`
   padding: 80px 160px;
@@ -19,21 +20,12 @@ const CategoryContainer = styled.div`
 `
 
 function Category() {
-  const categories = [
-    { img: '/imgs/category/clothes.png', title: 'Clothes' },
-    { img: '/imgs/category/electronic.png', title: 'Electronics' },
-    { img: '/imgs/category/furniture.png', title: 'Furniture' },
-    { img: '/imgs/category/shoes.png', title: 'Shoes' },
-    { img: '/imgs/category/phone.png', title: 'Smartphones' },
-    { img: '/imgs/category/camera.png', title: 'Cameras' }
-  ]
-
   return (
     <CategoryContainer>
       <h3>Browse By Category</h3>
       <div className="cards">
-        {categories.map((category, i) => (
-          <CategoryCard key={i} imgsrc={category.img} title={category.title} />
+        {categories.map(({id, img, title}) => (
+          id === 0 ? '' : <CategoryCard key={id} imgsrc={img} title={title} />
         ))}
       </div>
     </CategoryContainer>
